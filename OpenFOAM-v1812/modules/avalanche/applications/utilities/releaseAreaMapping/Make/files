@@ -1,4 +1,0 @@
-releaseAreaMapping.C
-HormannAgathos.C
-
-EXE = $(FOAM_APPBIN)/releaseAreaMapping

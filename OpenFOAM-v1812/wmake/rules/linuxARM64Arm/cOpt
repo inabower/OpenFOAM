@@ -1,2 +1,0 @@
-cDBUG       =
-cOPT        = -mcpu=thunderx2t99 -ffp-contract=fast -ffast-math -O3
