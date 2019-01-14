@@ -1,10 +1,47 @@
 # git-ls-files --others --exclude-from=.git/info/exclude
 # Lines that start with '#' are comments.
 
+# Editor and misc backup files - anywhere
+*~
+.*~
+.*.swp
+*.bak
+*.bak[0-9][0-9]
+\#*\#
+
+# File-browser settings - anywhere
+.directory
+
+# CVS recovered versions - anywhere
+.#*
+
+# Objects and archives - anywhere
+*.[oa]
+*.la
+*.so
+
+# Derived files
+lex.yy.c
+
+# Corefiles
+core
+
+# Dependency files - anywhere
+*.dep
+
 # lnInclude (symlink) directories - anywhere
 lnInclude
 
+# Build directories - anywhere
+linux*Clang*/
+linux*Gcc*/
+linux*Icc*/
+solaris*Gcc*/
+SunOS*Gcc*/
+platforms/
+
 # Top-level build directories
+/build/
 /platforms/
 
 # Reinstate wmake rules that might look like build directories
@@ -21,7 +58,23 @@ doc/Doxygen/DTAGS
 /*.html
 /doc/*.html
 
+# Untracked configuration files
+/etc/prefs.csh
+/etc/prefs.sh
+/etc/config.csh/prefs.csh
+/etc/config.sh/prefs.sh
+/wmake/rules/General/mplibUSER*
 
+# Source packages - anywhere
+*.tar.bz2
+*.tar.gz
+*.tar.xz
+*.tar
+*.tgz
+*.gtgz
+
+# Ignore the persistent .build tag in the main directory
+/.build
 
 # Ignore .timeStamp in the main directory
 /.timeStamp
